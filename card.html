@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scrolling Event Types</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.1/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @layer utilities {
+            .animate-scroll {
+                animation: scroll 40s linear infinite;
+            }
+            .paused {
+                animation-play-state: paused;
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Infinite Scrolling Event Types -->
+    <div class="overflow-hidden py-10">
+        <div class="flex items-center space-x-8 animate-scroll group">
+            <!-- Event Type List -->
+            <div class="flex space-x-8">
+                <!-- Image Cards -->
+                <div class="w-60 bg-white rounded shadow-md overflow-hidden">
+                    <img src="https://i.pravatar.cc/300?img=1" alt="Bachelor Party" class="w-full h-40 object-cover">
+                    <p class="text-center py-4 font-semibold">Bachelor Party</p>
+                </div>
+                <div class="w-60 bg-white rounded shadow-md overflow-hidden">
+                    <img src="https://i.pravatar.cc/300?img=2" alt="Wedding" class="w-full h-40 object-cover">
+                    <p class="text-center py-4 font-semibold">Wedding</p>
+                </div>
+                <div class="w-60 bg-white rounded shadow-md overflow-hidden">
+                    <img src="https://i.pravatar.cc/300?img=3" alt="Reception" class="w-full h-40 object-cover">
+                    <p class="text-center py-4 font-semibold">Reception</p>
+                </div>
+                <!-- Add more items as needed -->
+            </div>
+            <!-- Duplicate Event Type List for Seamless Scrolling -->
+            <div class="flex space-x-8" aria-hidden="true">
+                <!-- Image Cards -->
+                <div class="w-60 bg-white rounded shadow-md overflow-hidden">
+                    <img src="https://i.pravatar.cc/300?img=1" alt="Bachelor Party" class="w-full h-40 object-cover">
+                    <p class="text-center py-4 font-semibold">Bachelor Party</p>
+                </div>
+                <div class="w-60 bg-white rounded shadow-md overflow-hidden">
+                    <img src="https://i.pravatar.cc/300?img=2" alt="Wedding" class="w-full h-40 object-cover">
+                    <p class="text-center py-4 font-semibold">Wedding</p>
+                </div>
+                <div class="w-60 bg-white rounded shadow-md overflow-hidden">
+                    <img src="https://i.pravatar.cc/300?img=3" alt="Reception" class="w-full h-40 object-cover">
+                    <p class="text-center py-4 font-semibold">Reception</p>
+                </div>
+                <!-- Add more items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const scrollers = document.querySelectorAll(".group");
+
+        // Add animation if reduced motion is not preferred
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            addAnimation();
+        }
+
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                scroller.classList.add("animate-scroll");
+
+                // Clone the elements for seamless animation
+                const scrollerInner = scroller.querySelectorAll("div.flex")[0];
+                const scrollerContent = Array.from(scrollerInner.children);
+
+                // For each item in the array, clone it
+                // add aria-hidden to it
+                // add it into the `.flex` container
+                scrollerContent.forEach((item) => {
+                    const duplicatedItem = item.cloneNode(true);
+                    duplicatedItem.setAttribute("aria-hidden", true);
+                    scrollerInner.appendChild(duplicatedItem);
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>

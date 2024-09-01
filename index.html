@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Mahal Process</title>
+    <!-- Tailwind CSS  -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+
+    <link rel="icon"
+    href="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/favicon.ico.png?updatedAt=1724168697302"
+    type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HOME  -->
+    <section>
+        <div class="h-screen w-[100%] bg-cover main_cover fade" id="slideshow-container">
+        <!-- Navbar -->
+            <nav id="navbar" class="h-20 bg-transparent fixed top-0 left-0 w-full z-10 transition duration-300">
+                <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <div class="flex justify-between items-center">
+                        <!-- JS Mahal Logo -->
+                        <a href="#" class="text-2xl font-bold text-gray-900">
+                        <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/logo2.png?updatedAt=1724168693327" class="w-20 h-30">
+                        </a>
+            
+                        <!-- Mobile menu button -->
+                        <div class="md:hidden">
+                            <button id="sidebarOpen" class="text-white hover:text-yellow-400 focus:outline-none">
+                                <!-- Hamburger icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+            
+                        <!-- Links for Desktop -->
+                        <div class="items-center hidden md:flex md:space-x-8 playfair-display">
+                            <a href="#" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">HOME</a>
+                            <a href="#about" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">ABOUT US</a>
+                            <a href="/gallery.html" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">GALLERY</a>
+                            <a href="#amenities" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">AMENITIES</a>
+                            <a href="#" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">BOOK NOW!</a>
+                            <a href="#contact" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">CONTACT US</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+    
+            <!-- Sidebar for Mobile -->
+            <div id="sidebar" class="fixed inset-0 bg-gray-800 text-white w-64 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+                <div class="flex justify-between items-center px-4 py-4 border-b border-gray-700">
+                    <h2 class="text-lg font-bold">Menu</h2>
+                    <!-- Close Button -->
+                    <button id="sidebarClose" class="text-white focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4 space-y-4">
+                    <!-- Links for Sidebar -->
+                    <a href="#" class="block text-white hover:text-yellow-400">HOME</a>
+                    <a href="#about" class="block text-white hover:text-yellow-400">ABOUT US</a>
+                    <a href="/gallery.html" class="block text-white hover:text-yellow-400">GALLERY</a>
+                    <a href="#amenities" class="block text-white hover:text-yellow-400">AMENITIES</a>
+                    <a href="#" class="block text-white hover:text-yellow-400">BOOK NOW!</a>
+                    <a href="#contact" class="block text-white hover:text-yellow-400">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT  -->
+    <section id="about" class="py-8 m-10">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 m-10">
+            <!-- Video Section -->
+            <div class="w-full md:w-1/2">
+                <video controls class="w-full rounded-lg shadow-lg">
+                    <source src="your-video-file.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <!-- Text Section -->
+            <div class="w-full md:w-1/2 space-y-4 m-5">
+                <p class=" mochiy-pop-one-regular text-5xl font-extrabold text-gray-900"><span class="text-yellow-400">JS</span> MAHAL</p>
+                <p class="text-gray-700 poppins-light">
+                    JS Mahal is an ideal venue for weddings and social gatherings, accommodating over 1000 guests comfortably. With a spacious, elegant layout, it offers customizable seating arrangements to suit your event's needs. The hall is equipped with modern amenities and provides a blend of comfort and style, ensuring a memorable experience for all. Known for its professional staff and attention to detail, JS Mahal guarantees smooth event execution. Conveniently located with ample parking, it ensures easy access for guests. JS Mahal's ambiance and excellent service make it a top choice for unforgettable celebrations.
+                </p>
+            </div>
+        </div>
+    </section>
+  
+
+    <!-- AMENITIES  -->
+    <section id="amenities" class="poppins-light">
+        <p class="m-10 text-5xl font-extrabold text-center text-yellow-400 mochiy-pop-one-regular">AMENITIES</p>
+
+        <div class="flex flex-wrap items-start justify-center gap-6 m-10">
+            <div class="flex flex-col items-center text-center w-44">
+              <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/spp/arrow-left.png?updatedAt=1724168825889" class="w-16 h-16 mb-4">
+              <p class="text-sm">Dedicated Food/Good/Service Hydraulics lift and Passenger lift for your convenience</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+              <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/spp/camera.png?updatedAt=1724168825569" class="w-16 h-16 mb-4">
+              <p class="text-sm">24 Hours complete site surveillance by 4K cameras for your safety</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+              <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/appin/parked-car.png?updatedAt=1724168867611" class="w-16 h-16 mb-4">
+              <p class="text-sm">Car parking available</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+              <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/spp/cooling-system.png?updatedAt=1724168825945" class="w-16 h-16 mb-4">
+              <p class="text-sm">100% Air conditioned covering Party Hall, Dining hall, Rooms, Common Areas and Passages.</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+              <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/spp/office-chair.png?updatedAt=1724168825615" class="w-16 h-16 mb-4">
+              <p class="text-sm">Comfortable Party hall with great ambience having 250 seating capacity</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+              <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/appin/chair.png?updatedAt=1724168867616" class="w-16 h-16 mb-4">
+              <p class="text-sm">100 pax dining capacity</p>
+            </div>
+        </div>
+        
+        <div class="flex flex-wrap items-start justify-center gap-6 m-10">
+            <div class="flex flex-col items-center text-center w-44">
+                <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/appin/worldwide.png?updatedAt=1724168867548" class="w-16 h-16 mb-4">
+                <p class="text-sm">Multi-Gigabit High speed Internet & Wi-Fi (available on request)</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+                <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/spp/video-and-audio.png?updatedAt=1724168825854" class="w-16 h-16 mb-4">
+                <p class="text-sm">State of the art Studio quality Audio & Visual equipments.</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+                <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/appin/audio-speaker.png?updatedAt=1724168867632" class="w-16 h-16 mb-4">
+                <p class="text-sm">Entire building covered by soothing background music</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+                <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/appin/valet-parking.png?updatedAt=1724168867211" class="w-16 h-16 mb-4">
+                <p class="text-sm">Valet parking (available on request)</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+                <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/spp/siblings.png?updatedAt=1724168825898" class="w-16 h-16 mb-4">
+                <p class="text-sm">Welcome girls (available on request)</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+                <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/appin/house-keeping.png?updatedAt=1724168867618" class="w-16 h-16 mb-4">
+                <p class="text-sm">24 Hours House Keeping</p>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap items-start justify-center gap-6 m-10">
+            <div class="flex flex-col items-center text-center w-44">
+            <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/spp/board-meeting.png?updatedAt=1724168825849" class="w-16 h-16 mb-4">
+            <p class="text-sm">Conference Room/Business Center with High end dedicated audio system,Large screen projectors</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+            <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/spp/solution.png?updatedAt=1724168825941" class="w-16 h-16 mb-4">
+            <p class="text-sm">All areas covred by IP Phones digital phone service Digital Entertainment (OTA Videos, Bluetooth/USB enabled Soundbars)</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+            <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/appin/home.png?updatedAt=1724168867554" class="w-16 h-16 mb-4">
+            <p class="text-sm">Staging/Decoration service (On request)</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+            <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/appin/video.png?updatedAt=1724168867636" class="w-16 h-16 mb-4">
+            <p class="text-sm">Photo/Video services (on request)</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+            <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/appin/catering.png?updatedAt=1724168867221" class="w-16 h-16 mb-4">
+            <p class="text-sm">Catering services (On request)</p>
+            </div>
+            <div class="flex flex-col items-center text-center w-44">
+            <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/appin/chef.png?updatedAt=1724168867619" class="w-16 h-16 mb-4">
+            <p class="text-sm">Kitchen facility available for client usage</p>
+            </div>
+        </div> 
+    </section>
+
+
+    <!-- CUTOMER REVIEW  -->
+    <section id="review" class="poppins-light">
+        <div class="flex flex-wrap justify-center items-center m-20 gap-10">
+            <div class="block max-w-sm p-6 bg-white border border-yellow-300 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <p class="font-normal text-gray-700 dark:text-gray-400">
+                    JS Mahal is an exquisite venue with a perfect blend of contemporary style and timeless elegance. The ambiance is
+                    incredibly welcoming, with impressive guest rooms and stunning interior lighting that truly stands out.providing excellent value for a very reasonable price.
+                    For weddings, this venue comes highly recommended. The staff were exceptionally professional and courteous,
+                    ensuring our event went smoothly and was memorable.Thank you!
+                </p>
+                <p class="mb-2 mt-1 text-2xl font-bold tracking-tight text-yellow-400 dark:text-white">Gokul</p>
+            </div>
+
+            <div class="block max-w-sm p-6 bg-white border border-yellow-300 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                <p class="font-normal text-gray-700 dark:text-gray-400">
+                    JS Mahal is an exquisite venue with a perfect blend of contemporary style and timeless elegance. The ambiance is
+                    incredibly welcoming, with impressive guest rooms and stunning interior lighting that truly stands out.providing excellent value for a very reasonable price.
+                    For weddings, this venue comes highly recommended. The staff were exceptionally professional and courteous,
+                    ensuring our event went smoothly and was memorable.Thank you!
+                </p>
+                <p class="mb-2 mt-1 text-2xl font-bold tracking-tight text-yellow-400 dark:text-white">Gokul</p>
+            </div>
+        </div>  
+    </section>
+        
+
+    <!-- CONTACT SECTION  -->
+    <section id="contact" class="relative p-0 mx-10 poppins-light">
+        <!-- Background Overlay with Image -->
+        <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/map-img.jpg?updatedAt=1724168694171');"></div>
+            <div class="container mx-auto py-12 relative">
+                <div class="flex flex-wrap items-center">
+                    <!-- Google Map Embed -->
+                    <div class="w-full md:w-1/2 p-3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31094.233541745692!2d80.18701638561662!3d13.04972231602131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266c10da10051%3A0xe44e24a790b0976e!2sJS%20Thirumana%20Mandapam!5e0!3m2!1sen!2sin!4v1724127789321!5m2!1sen!2sin" width="100%" height="350" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <!-- Contact Details -->
+                    <div class="w-full md:w-1/2 p-3">
+                        <div class="relative p-8 bg-white bg-opacity-90 text-black rounded-md shadow-lg">
+                                <!-- Title -->
+                                <h2 class="mb-4 text-2xl font-bold"><span class="text-yellow-400">JS</span> Mahal</h2>
+                                <!-- Address -->
+                                <p class="mb-3">No 179 A, Kumaran Colony Main Road, Vadapalani, Chennai - 600026 <br>(Near Vadapalani Bus Terminus)</p>
+                                <!-- Phone -->
+                                <p class="mb-3">Mobile: +91-08904992579</p>
+                                <p class="mb-3">Mobile: +91-08904992579</p>
+                                <p class="mb-3">Mobile: +91-08904992579</p>
+                                <!-- Email -->
+                                <p class="mb-3">E-mail: contact@jsmahal.in</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+
+    <!-- FOOTER  -->
+    <section id="footer" class="my-10 text-center">
+        <div>
+            <p class="text-md text-gray-400">
+                © <script>document.write(new Date().getFullYear())</script> Website Designed By
+                <a href="https://www.linkedin.com/in/sivanesan-k03/" class="text-blue-500 hover:underline" target="_blank">Sivanesan</a> and
+                <a href="https://www.linkedin.com/in/dhayananthgs" class="text-blue-500 hover:underline" target="_blank">Dhayananth</a>
+            </p>
+        </div>
+    </section>
+ 
+</body>
+<script src="./script.js"></script>
+</html>
+
+
+
