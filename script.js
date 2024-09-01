@@ -43,17 +43,18 @@ let test1 = document.getElementById("slideshow-container");
 let textElement = document.getElementById('animated-text');
 
 let images = [
-    "url('image1.jpg')",
-    "url('image2.jpg')",
-    "url('image3.jpg')",
-    "url('image4.jpg')",
-    "url('image5.jpg')",
-    "url('image6.jpg')",
-    "url('image7.jpg')",
-    "url('image8.jpg')",
-    "url('image9.jpg')",
-    "url('image10.jpg')"
+    "https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-1.jpg?updatedAt=1724168694454",
+    "https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-2.jpg?updatedAt=1724168694332",
+    "https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-3.jpg?updatedAt=1724168694383",
+    "https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-4.jpg?updatedAt=1724168696976",
+    "https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-5.jpg?updatedAt=1724168697235",
+    "https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-6.jpg?updatedAt=1724168697102",
+    "https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-7.jpg?updatedAt=1724168697604",
+    "https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-8.jpg?updatedAt=1724168698034",
+    "https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-9.jpg?updatedAt=1724168697989",
+    "https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-10.jpg?updatedAt=1724168698038"
 ];
+
 let texts = [
     "Welcome to JS Mahal",
     "Discover Our Gallery",
@@ -72,7 +73,7 @@ const n = texts.length;
 
 const change_slide = () => {
     // Change the background image
-    test1.style.backgroundImage = images[num];
+    test1.className = `${images[num]}`;  // Corrected typo
 
     // Delay the text change to appear after the image change
     setTimeout(() => change_text(num), 1000); // 1-second delay for text after image change
@@ -98,8 +99,6 @@ const change_text = (index) => {
 document.addEventListener('DOMContentLoaded', () => {
     change_slide();
 });
-
-
 
 
 
