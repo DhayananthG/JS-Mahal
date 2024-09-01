@@ -42,7 +42,71 @@
 </style>
 
 <body>
+    <!-- Navbar -->
+    <section id="home">
+        <!-- Navbar -->
+            <nav id="navbar" class="fixed top-0 left-0 z-10 w-full h-20 transition duration-300 bg-transparent">
+                <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                    <div class="flex items-center justify-between">
+                        <!-- JS Mahal Logo -->
+                        <a href="#" class="text-2xl font-bold text-gray-900">
+                        <img src="https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/logo2.png?updatedAt=1724168693327" class="w-20 h-30">
+                        </a>
+            
+                        <!-- Mobile menu button -->
+                        <div class="md:hidden">
+                            <button id="sidebarOpen" class="text-black hover:text-yellow-400 focus:outline-none">
+                                <!-- Hamburger icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+            
+                        <!-- Links for Desktop -->
+                        <div class="items-center hidden md:flex md:space-x-8 playfair-display">
+                            <a href="./index.html"
+                                class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">HOME</a>
+                            <a href="./index.html#about"
+                                class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">ABOUT
+                                US</a>
+                            <a href="./index.html#facilities"
+                                class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">FACILITIES</a>
+                            <a href="./index.html#amenities"
+                                class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">AMENITIES</a>
+                            <a href="./index.html#contact"
+                                class="px-3 py-2 font-medium transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md poppins-light">CONTACT
+                                US</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
 
+            <!-- Sidebar for Mobile -->
+            <div id="sidebar" class="fixed inset-0 z-50 w-64 text-black transition-transform duration-300 ease-in-out transform -translate-x-full bg-black md:hidden">
+                <div class="flex items-center justify-between px-4 py-4 border-b border-gray-700">
+                    <h2 class="text-lg font-bold">Menu</h2>
+                    <!-- Close Button -->
+                    <button id="sidebarClose" class="text-white focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-4 space-y-4">
+                    <!-- Links for Sidebar -->
+                    <a href="#home" class="block text-white hover:text-yellow-400 poppins-light">HOME</a>
+                    <a href="#about" class="block text-white hover:text-yellow-400 poppins-light">ABOUT US</a>
+                    <a href="./gallery.html" class="block text-white hover:text-yellow-400 poppins-light">GALLERY</a>
+                    <a href="#facilities" class="block text-white hover:text-yellow-400 poppins-light">FACILITIES</a>
+                    <a href="#amenities" class="block text-white hover:text-yellow-400 poppins-light">AMENITIES</a>
+                    <a href="#contact" class="block text-white hover:text-yellow-400 poppins-light">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
     <!-- Banner or Image Section -->
     <div class="mt-24"> <!-- Increased margin-top for more space -->
         <div class="m-10">
@@ -125,5 +189,5 @@
     </section>
 
 </body>
-
+<script src="./script2.js"></script>
 </html>

@@ -56,6 +56,7 @@ sidebarClose.addEventListener('click', () => {      // Close sidebar
       
 // Select the navbar element
 const navbar = document.getElementById('navbar');
+
 const sideBar = document.getElementById('sidebarOpen');
 // Add an event listener for scrolling
 window.addEventListener('scroll', () => 
@@ -75,3 +76,4 @@ window.addEventListener('scroll', () =>
         sideBar.classList.add('text-white');
     }
 });
+
