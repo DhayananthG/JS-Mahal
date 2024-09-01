@@ -1,6 +1,12 @@
-.main_cover{
-    background-image: url("https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-1.jpg?updatedAt=1724168694454");
+.main_cover {
+  background-image: url("https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-1.jpg?updatedAt=1724168694454");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto; /* Adjust the height as needed */
 }
+
 .main_cover1{
     background-image: url("https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/banner-2.jpg?updatedAt=1724168694332");
 }
