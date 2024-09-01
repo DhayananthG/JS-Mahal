@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -25,7 +26,7 @@
 <body>
 
     <!-- HOME  -->
-    <section>
+    <section id="home">
         <div class="h-screen w-[100%] bg-cover main_cover fade" id="slideshow-container">
         <!-- Navbar -->
             <nav id="navbar" class="h-20 bg-transparent fixed top-0 left-0 w-full z-10 transition duration-300">
@@ -48,11 +49,11 @@
             
                         <!-- Links for Desktop -->
                         <div class="items-center hidden md:flex md:space-x-8 playfair-display">
-                            <a href="#" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">HOME</a>
+                            <a href="#home" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">HOME</a>
                             <a href="#about" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">ABOUT US</a>
                             <a href="/gallery.html" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">GALLERY</a>
                             <a href="#amenities" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">AMENITIES</a>
-                            <a href="#" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">BOOK NOW!</a>
+                            <a href="/Pricing.html" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">BOOK NOW!</a>
                             <a href="#contact" class="px-3 py-2 font-medium  transition duration-300 ease-in-out rounded-md hover:text-yellow-400 text-md">CONTACT US</a>
                         </div>
                     </div>
@@ -60,7 +61,7 @@
             </nav>
     
             <!-- Sidebar for Mobile -->
-            <div id="sidebar" class="fixed inset-0 bg-gray-800 text-white w-64 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
+            <div id="sidebar" class="fixed inset-0 bg-black text-white w-64 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden z-50">
                 <div class="flex justify-between items-center px-4 py-4 border-b border-gray-700">
                     <h2 class="text-lg font-bold">Menu</h2>
                     <!-- Close Button -->
@@ -72,11 +73,11 @@
                 </div>
                 <div class="p-4 space-y-4">
                     <!-- Links for Sidebar -->
-                    <a href="#" class="block text-white hover:text-yellow-400">HOME</a>
+                    <a href="#home" class="block text-white hover:text-yellow-400">HOME</a>
                     <a href="#about" class="block text-white hover:text-yellow-400">ABOUT US</a>
                     <a href="/gallery.html" class="block text-white hover:text-yellow-400">GALLERY</a>
                     <a href="#amenities" class="block text-white hover:text-yellow-400">AMENITIES</a>
-                    <a href="#" class="block text-white hover:text-yellow-400">BOOK NOW!</a>
+                    <a href="/Pricing.html" class="block text-white hover:text-yellow-400">BOOK NOW!</a>
                     <a href="#contact" class="block text-white hover:text-yellow-400">CONTACT US</a>
                 </div>
             </div>
@@ -96,10 +97,52 @@
             
             <!-- Text Section -->
             <div class="w-full md:w-1/2 space-y-4 m-5">
-                <p class=" mochiy-pop-one-regular text-5xl font-extrabold text-gray-900"><span class="text-yellow-400">JS</span> MAHAL</p>
+                <p class="poppins text-5xl font-extrabold text-gray-900"><span class="text-yellow-400">JS</span>MAHAL</p>
                 <p class="text-gray-700 poppins-light">
                     JS Mahal is an ideal venue for weddings and social gatherings, accommodating over 1000 guests comfortably. With a spacious, elegant layout, it offers customizable seating arrangements to suit your event's needs. The hall is equipped with modern amenities and provides a blend of comfort and style, ensuring a memorable experience for all. Known for its professional staff and attention to detail, JS Mahal guarantees smooth event execution. Conveniently located with ample parking, it ensures easy access for guests. JS Mahal's ambiance and excellent service make it a top choice for unforgettable celebrations.
                 </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <p class="text-center text-5xl poppins text-yellow-400">Facilities</p>
+        <div class="poppins-light">
+            <div class="flex flex-wrap items-start justify-center gap-6 m-10">
+                <div class="flex flex-col items-center text-center w-56">
+                  <img src="https://ik.imagekit.io/lbxyzo732/Facilities/chair-5-svgrepo-com.svg?updatedAt=1725175769942" class="w-24 h-26 mb-4">
+                  <p class="text-md">500 Seating Capacity</p>
+                </div>
+                <div class="flex flex-col items-center text-center w-56">
+                  <img src="https://ik.imagekit.io/lbxyzo732/Facilities/dining-room-furniture-svgrepo-com.svg?updatedAt=1725175692812" class="w-24 h-26 mb-4">
+                  <p class="text-md">150 Dining </p>
+                </div>
+                <div class="flex flex-col items-center text-center w-56">
+                  <img src="https://ik.imagekit.io/lbxyzo732/Facilities/calendar-event-available-svgrepo-com.svg?updatedAt=1725176243976" class="w-24 h-26 mb-4">
+                  <p class="text-md">9 Rooms Available (Including Bride and Groom)</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-start justify-center gap-6 m-10">
+                <div class="flex flex-col items-center text-center w-56">
+                  <img src="https://ik.imagekit.io/lbxyzo732/Facilities/car-svgrepo-com.svg?updatedAt=1725175692880" class="w-24 h-26 mb-4">
+                  <p class="text-md">15 cars + Valet Drivers Avilable</p>
+                </div>
+                <div class="flex flex-col items-center text-center w-56">
+                  <img src="https://ik.imagekit.io/lbxyzo732/Facilities/bike-with-motor-ios-7-interface-symbol-svgrepo-com.svg?updatedAt=1725175692837" class="w-24 h-26 mb-4">
+                  <p class="text-md">100 Bikes can be Parked</p>
+                </div>
+                <div class="flex flex-col items-center text-center w-56">
+                  <img src="https://ik.imagekit.io/lbxyzo732/Facilities/air-conditioner-svgrepo-com.svg?updatedAt=1725175692777" class="w-24 h-26 mb-4">
+                  <p class="text-md">Fully Air-Conditioned Mahal</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-start justify-center gap-6 m-10">
+                <div class="flex flex-col items-center text-center w-56">
+                    <img src="https://ik.imagekit.io/lbxyzo732/Facilities/temple-india-svgrepo-com.svg?updatedAt=1725175692844" class="w-24 h-26 mb-4">
+                    <p class="text-md">Specialized Brahmin Package available</p>
+                    <p class="text-center">(2<small>1/2</small> Days)</p>
+                    </div>
             </div>
         </div>
     </section>
@@ -107,7 +150,7 @@
 
     <!-- AMENITIES  -->
     <section id="amenities" class="poppins-light">
-        <p class="m-10 text-5xl font-extrabold text-center text-yellow-400 mochiy-pop-one-regular">AMENITIES</p>
+        <p class="m-10 text-5xl font-extrabold text-center text-yellow-400 poppins">AMENITIES</p>
 
         <div class="flex flex-wrap items-start justify-center gap-6 m-10">
             <div class="flex flex-col items-center text-center w-44">
@@ -192,6 +235,11 @@
     </section>
 
 
+    <section>
+        
+    </section>
+
+
     <!-- CUTOMER REVIEW  -->
     <section id="review" class="poppins-light">
         <div class="flex flex-wrap justify-center items-center m-20 gap-10">
@@ -219,7 +267,7 @@
         
 
     <!-- CONTACT SECTION  -->
-    <section id="contact" class="relative p-0 mx-10 poppins-light">
+    <section id="contact" class="relative p-0 mx-10 lg:mx2 poppins-light">
         <!-- Background Overlay with Image -->
         <div class="absolute inset-0 bg-cover bg-center opacity-50" style="background-image: url('https://ik.imagekit.io/y0h8r4hyq/jsmahal/restarant/img/map-img.jpg?updatedAt=1724168694171');"></div>
             <div class="container mx-auto py-12 relative">
